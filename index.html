@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                     <!-- fontAwesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+                                   <!-- google fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+                                  <!-- bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+                                 <!-- main stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+  <title>bookmark</title>
+</head>
+<body>
+    <div class="bookmark text-center py-5 bg-">
+        <div class="container">
+       <h1 class="py-">Bookmarker  </h1>
+            <hr class="mt-4 mb-5">
+        </div>
+        <div class="bookmarker-body">
+            <div class="container">
+                 <h2>
+             <i class="fa-solid fa-bookmark"></i>
+               Bookmark your favorite sites 
+             <i class="fa-solid fa-bookmark"></i> </h2>
+
+                <form>
+                    <div class="form-group">
+                        <h6 class="float-sm-start mt-5"><i class="fa-solid fa-book-bookmark"></i> Site name</h6>
+                      <lable for="siteName"></label>
+                      <input oninput="ValidationName()" type="text" class="form-control" id="siteName"  placeholder="book name">
+                    </div>
+                    <div class="form-group">
+                      <h6 class="float-sm-start mt-5"><i class="fa-solid fa-link "></i>Site url</h6>
+                      <label for="website url"> </label>
+                      <input oninput="Validationurl()" type="txt" class="form-control " id="website url" placeholder="website url">
+                      
+                    </div>
+                    <button type="button" id="submit" onclick="Submit()"  class="btn btn-danger btn-lg m-5">Submit</button>
+                    <hr class="mt-4 mb-5">
+                  </form>
+    
+                  <table id="table" class="table mt-4 text-center bg-white ">
+                    <thead>
+                  <tr >
+                     <th>Index</th>
+                     <th>Website Name</th>
+                      <th>Visit</th>
+                      <th>Delete</th>
+                   </tr>
+                    </thead>
+                    <tbody id="tableContenet"> 
+                  </table>
+            </div>
+            
+        </div>
+    </div>
+
+<script src="./js/sweetalert.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
