@@ -3,6 +3,11 @@ var urlInput = document.getElementById("website url");
 
 var bookmarkList = [];
 
+if (localStorage.getItem("bookmarkContainer") != null) {
+  bookmarkList = JSON.parse(localStorage.getItem("bookmarkContainer"));
+  displayData(bookmarkList);
+}
+
 function Submit() {
   if(ValidationName()){{
     var bookmark = {
@@ -11,7 +16,7 @@ function Submit() {
     }
   
     bookmarkList.push(bookmark);
-    localStorage.setItem("Bookmarks", JSON.stringify(bookmarkList));
+    localStorage.setItem("bookmarkContainer", JSON.stringify(bookmarkList));
   
     displayData();
   
@@ -51,7 +56,7 @@ function displayData(){
 
 function deleteBookmark(i) {
   bookmarkList.splice(i, 1);
-  localStorage.setItem("Bookmarks", JSON.stringify(bookmarkList));
+  localStorage.setItem("bookmarkContainer", JSON.stringify(bookmarkList));
   displayData(bookmarkList);
 }
 
