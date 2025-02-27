@@ -2,7 +2,7 @@
 .bookmark h1{
     font-family: "Pacifico", cursive;
     font-size: 50px;
-text-shadow: #B4AC4A;
+    color: #27231c;
 
     
 
@@ -11,7 +11,8 @@ body{
     background-color: #37210B;
 }
 h2{
-    color: #B4AC4A;
+    color:#27231c;
+
     
 }
 button{
