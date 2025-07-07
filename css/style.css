@@ -4,15 +4,16 @@
     font-size: 50px;
     color: #27231c;
 
+
     
 
 }
 body{
-    background-color: #37210B;
+    background-color: antiquewhite;
 }
 h2{
-    color:#27231c;
-
+    color:#201c17
+    ;
     
 }
 button{
@@ -20,5 +21,11 @@ width: 19%;}
 hr{
     border: 2px dashed black !important;
 opacity: 75%;
+}
+
+.small-alert{
+    font-size: 13px;
+    padding: 4px 8px;
+    margin-top: 5px;
 }
 
