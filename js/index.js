@@ -63,30 +63,25 @@ function deleteBookmark(i) {
 
 
 function ValidationName(){
-  var regex = /^\w{3,}(\s+\w+)*$/;
+  const nameAlert=document.getElementById('nameAlert');
+  var regex =/^[a-zA-Z0-9_-]{3,}$/ ;
    var term = siteInput.value
    
    if( regex.test(term)){
     siteInput.classList.add("is-valid")
     siteInput.classList.remove("is-invalid")
+     nameAlert.classList.add('d-none')
     return true
 
    }
    else{
     siteInput.classList.add("is-invalid")
     siteInput.classList.remove("is-valid")
+    nameAlert.classList.remove('d-none')
 
-    swal({
-      title: "Name or URL is not valid!",
-      text: `Please follow the rules below:
-              > Site name must contain at least 3 characters
-              > The URL must start with either http or https followed by :// 
-                it must contain www. followed by subdomain of length(2, 256)
-                last part contains top level domain like .com, .org etc.`,
-    });
 
-    return false
     
+    return false
 
   
    }
@@ -99,6 +94,8 @@ function ValidationName(){
        if( httpRegEx.test(urlregex)){
         urlInput.classList.add("is-valid")
         urlInput.classList.remove("is-invalid")
+         urlAlert.classList.add('d-none')
+
         
         return true
     
@@ -106,15 +103,9 @@ function ValidationName(){
        else{
         urlInput.classList.add("is-invalid")
         urlInput.classList.remove("is-valid")
-        swal({
-          title: "Name or URL is not valid!",
-          text: `Please follow the rules below:
-                  > Site name must contain at least 3 characters
-                  > The URL must start with either http or https followed by :// 
-                    it must contain www. followed by subdomain of length(2, 256)
-                    last part contains top level domain like .com, .org etc.`,
-        });
-    
+        urlAlert.classList.remove('d-none')
+
+       
     
         return false
 
